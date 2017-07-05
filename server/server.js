@@ -37,6 +37,24 @@ jokes = [
   }
 ];
 
+//post terrible jokes from user
+app.post('/addjokes', function(req, res) {
+  var newJoke = req.body;
+  console.log(newJoke);
+  jokes.push(newJoke);
+  res.send(jokes);
+});
+
+
+
+//serve back jokes
+app.get('/terribleJokes', function(req, res) {
+  console.log(jokes);
+  res.send(jokes);
+});
+
+
+
 // server back static files
 app.get("/*", function(req, res) {
   var file = req.params[0] || "/views/index.html";
