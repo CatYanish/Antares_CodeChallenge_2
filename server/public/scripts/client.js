@@ -40,7 +40,7 @@ $.ajax({
   success: function(response) {
     console.log(response);
     for (var i = 0; i < response.length; i++) {
-      $('#outputDiv').append('<p>' + response[i].jokeQuestion +
+      $('#outputDiv').append('<p>' + response[i].jokeQuestion + '</p>', '<p>' +
       response[i].punchLine + '</p>','<p>' + response[i].whoseJoke + '</p>');
     }
   }
